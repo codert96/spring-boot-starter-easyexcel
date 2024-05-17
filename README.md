@@ -14,12 +14,12 @@
 
   
     @PostMapping("excel")
-    public @Ignored Object excel(@RequestExcel List<Person> people) {
+    public List<Person> excel(@RequestExcel List<Person> people) {
         return people;
     }
 
     @Data
-    public static class Person {
+    public class Person {
 
         @ExcelProperty("姓名")
         private String name;
